@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="static/css/style.css">
+        <title>Show the log</title>
+    </head>
+    <body>
+        <h1>Show the log</h1>
+        <p>{{ massage }}</p>
+        <table>
+            <tr><th class="line">投稿時間</th><th>投稿</th><th>備考</th></tr>
+                {% for line in lines: %}
+                    {% set column = line.rstrip().split(",") %}
+                    <tr>
+                        {% for item in column: %}
+                            <td> {{ item }} </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </table>
+    </body>
+    <footer>
+        <a href="/">&lt; top &gt;</a>
+        <a href="/delete">&lt; 最新メモを削除 &gt;</a>
+    </footer>
+</html>

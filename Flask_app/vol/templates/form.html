@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Add the log</title>
+  </head>
+  <body>
+    <h1>Add the log</h1>
+      <p>{{ massage }}</p>
+        <form action="/add" method="post">
+          <label for="log">メモ</label>
+          <input type="text" name="log">
+          <p></p>
+          <label for="name">備考</label>
+          <input type="text" name="name">
+          <button type="submit">送信する</button>
+      </form>
+  </body>
+  <footer>
+    
+  </footer>
+</html>

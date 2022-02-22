@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Test Page</title>
+  </head>
+  <body>
+    <h1>TOP</h1>
+
+    <p>{{massage}}</p>
+    <div>
+      <h2>メモを追加する</h2>
+      <p>メモを追加するとタイムスタンプが一緒に記録されます</p>
+      <form action="/add" method="post">
+        <label for="log">メモ</label>
+        <input type="text" name="log">
+
+        <label for="name">備考</label>
+        <input type="text" name="name">
+
+        <button type="button" onclick="submit();">送信する</button>
+      </form>
+    </div>
+    <h2>今までのメモを見る</h2>
+    <a href="/all">&lt; 履歴 &gt;</a>
+    <h3>メモの削除は履歴ページから行うことができます。</h3>
+  </body>
+  <footer>
+  </footer>
+</html>
